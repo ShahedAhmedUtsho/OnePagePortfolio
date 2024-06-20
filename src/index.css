@@ -1,0 +1,72 @@
+@import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Input Sans';
+  src: url('./Assets/Fonts/InputSans.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Plex Sans';
+  src: url('./Assets/Fonts/IBMPlexSans.ttf') format('truetype');
+}
+
+
+.globalBG {
+  background-image: url(./Assets/Svg/1.png);
+}
+
+
+
+
+
+
+.heroText {
+
+  font-family: 'Input Sans', sans-serif;
+  font-weight: 300;
+  line-height: 88px;
+  text-transform: none;
+  background-image: linear-gradient(to right, #f29871, #ff4d4d);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (landscape phones, 640px and up) */
+@media (min-width: 640px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {}
+
+/* Extra large devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {}
+
+/* 2 Extra large devices (extra large desktops, 1536px and up) */
+@media (min-width: 1536px) {}
