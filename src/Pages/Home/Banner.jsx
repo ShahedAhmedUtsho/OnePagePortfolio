@@ -17,13 +17,7 @@ const Banner = () => {
       <span className=" font-input-sans">Your Text Here</span>
     </h1>
     <div>
-    {
-    ["project", "templates", "components","blog"].map((a,index)=> <Link className='text-sm text-left  capitalize    align-bottom  px-5 py-2 text-slate-400 hover:text-slate-300  leading-5' key={index} to={`/${a}`}><span className='  font-input-sans underline 
-    !capitalize '>{a}</span></Link>)
-}
-{
-    ["templates","project", "components","blog"].map((a,index)=> <Link className='' key={index} to={`/${a}`}><span className=' capitalize '>{a}</span></Link>)
-}
+
     </div>
     <div className="text-4xl md:text-6xl font-bold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading hello 1</div>
 <div className="text-3xl md:text-5xl font-semibold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 2</div>
