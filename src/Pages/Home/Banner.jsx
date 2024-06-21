@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
-    <div className='globalBG bg-slate-800 md:px-10'>
+    <div className='globalBG bg-gray-900 md:px-10'>
       <div className='HeroHead'>
       <h2 className=' heroText responsiveText '>
       Achieve mastery

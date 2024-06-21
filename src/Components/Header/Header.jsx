@@ -1,5 +1,4 @@
-import { AlignJustify, AlignLeft, X } from 'lucide-react';
-import { List } from 'phosphor-react';
+import { AlignJustify, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
@@ -7,7 +6,12 @@ const Header = () => {
     const [lastScrollPosition, setLastScrollPosition] = useState(window.pageYOffset);
     const [visible, setVisible] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
+    const [dark, setDark] = useState(() => {
+        return localStorage.getItem("darkMode") === "true";
+    });
+    
     const toggleBar = () => {
         setIsOpen(!isOpen);
     };
@@ -18,6 +22,7 @@ const Header = () => {
         setVisible(scrollUp || currentPosition < 10);
         setLastScrollPosition(currentPosition);
     };
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -33,9 +38,22 @@ const Header = () => {
         };
     }, [lastScrollPosition]);
 
+    const handleMood = () => {
+        setDark(!dark);
+    };
+
+    useEffect(() => {
+        if (dark) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('darkMode', dark);
+    }, [dark]);
+
     return (
         <>
-            <div className={`w-full globalBG fixed left-0 transition-all z-[999] duration-300 ${visible ? "top-0" : "-top-20"} right-0 m-auto border-b border-slate-500 bg-indigo-100 dark:bg-gray-950 leading-6 min-h-[72px] md:px-10 flex font-input-sans items-center`}>
+            <div className={`w-full globalBG fixed left-0 transition-transform z-[999] duration-300 ${visible ? "top-0" : "-top-20"} right-0 m-auto border-b border-slate-500 bg-indigo-100 dark:bg-gray-950 leading-6 min-h-[72px] md:px-10 flex font-input-sans items-center`}>
                 <div className='flex gap-3 items-center w-full h-full'>
                     <div className='logo flex items-center'>
                         <Link to="/" className='font-input-sans text-3xl dark:text-slate-400'>
@@ -51,6 +69,9 @@ const Header = () => {
                             ))}
                         </nav>
                         <div className="flex gap-3">
+                            <button onClick={handleMood} className='px-2 text-base dark:text-indigo-300'>
+                                {dark ? <Sun size={18} /> : <Moon size={18} />}
+                            </button>
                             <button className='ghostBtn btn self-end hidden lg:inline-block text-slate-400 font-input-sans text-sm'>
                                 Log in
                             </button>
@@ -65,29 +86,23 @@ const Header = () => {
                 </div>
             </div>
 
-
             {isOpen && (
-                <div className='w-full flex flex-col lg:hidden fixed  bg-slate-800 globalBG pt-20 h-screen'>
+                <div className='w-full flex flex-col lg:hidden fixed bg-slate-800 globalBG pt-20 h-screen'>
                     {["project", "templates", "components", "blog"].map((a, index) => (
                         <NavLink onClick={toggleBar} className='text-sm text-left align-bottom px-5 py-2 text-slate-400 hover:text-slate-300 leading-5' key={index} to={`/${a}`}>
                             <span className='font-input-sans capitalize'>{a}</span>
                         </NavLink>
-                        
                     ))}
-                     <button onClick={toggleBar} className='ghostBtn btn mx-5 my-2  text-slate-400 font-input-sans text-sm'>
-                                Log in
-                            </button>
-
-                            <button onClick={toggleBar} className='btn border  mx-5 my-2  border-indigo-300 text-indigo-300 font-input-sans text-sm'>
-                                Join
-                            </button>
-                           
+                    <button onClick={toggleBar} className='ghostBtn btn mx-5 my-2 text-slate-400 font-input-sans text-sm'>
+                        Log in
+                    </button>
+                    <button onClick={toggleBar} className='btn border mx-5 my-2 border-indigo-300 text-indigo-300 font-input-sans text-sm'>
+                        Join
+                    </button>
                 </div>
             )}
-
-
         </>
     );
 };
 
-export default Header;
+export default Header

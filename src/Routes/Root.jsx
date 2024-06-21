@@ -5,11 +5,9 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
-        <div >
+        <div className='transition-all ' >
            <Header/>
-           <div className='md:px-10'>
            
-           </div>
            <Outlet/>
         </div>
     );
