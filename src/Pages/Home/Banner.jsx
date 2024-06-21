@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
   return (
-    <div className='globalBG bg-slate-800'>
+    <div className='globalBG bg-slate-800 md:px-10'>
       <div className='HeroHead'>
       <h2 className=' heroText responsiveText '>
       Achieve mastery
@@ -12,11 +13,19 @@ const Banner = () => {
       <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition font-input-sans text-base md:text-lg font-medium leading-normal md:leading-relaxed tracking-tight md:tracking-normal">
   Primary Button
 </button>
-<h1 className=" font-light leading-tight text-transparent bg-gradient-to-r from-[#f29871] to-[#ff4d4d] bg-clip-text">
+<h1 className=" font-light leading-tight capitalize text-transparent bg-gradient-to-r from-[#f29871] to-[#ff4d4d] bg-clip-text">
       <span className=" font-input-sans">Your Text Here</span>
     </h1>
-
-    <div className="text-4xl md:text-6xl font-bold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 1</div>
+    <div>
+    {
+    ["project", "templates", "components","blog"].map((a,index)=> <Link className='text-sm text-left  capitalize    align-bottom  px-5 py-2 text-slate-400 hover:text-slate-300  leading-5' key={index} to={`/${a}`}><span className='  font-input-sans underline 
+    !capitalize '>{a}</span></Link>)
+}
+{
+    ["templates","project", "components","blog"].map((a,index)=> <Link className='' key={index} to={`/${a}`}><span className=' capitalize '>{a}</span></Link>)
+}
+    </div>
+    <div className="text-4xl md:text-6xl font-bold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading hello 1</div>
 <div className="text-3xl md:text-5xl font-semibold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 2</div>
 <div className="text-2xl md:text-4xl font-semibold leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 3</div>
 <div className="text-xl md:text-3xl font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 4</div>

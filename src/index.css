@@ -19,9 +19,30 @@
 }
 
 
+.ghostBtn {
+
+  border: 1px solid rgba(255, 255, 255, 0.304);
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 0.571em 1.42em 0.42em 1.42em;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+
+}
+
+.btn:hover {
+  opacity: 90%;
 
 
+}
 
+.primaryBtn {
+  background-color: #4f46e5;
+  border: 1px solid #6366f1;
+
+}
 
 .heroText {
 
@@ -53,20 +74,14 @@
 
 
 
+/* 
 
 
-
-/* Small devices (landscape phones, 640px and up) */
 @media (min-width: 640px) {}
 
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {}
-
-/* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {}
 
-/* Extra large devices (large desktops, 1280px and up) */
 @media (min-width: 1280px) {}
 
-/* 2 Extra large devices (extra large desktops, 1536px and up) */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {} */
