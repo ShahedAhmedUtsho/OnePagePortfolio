@@ -16,9 +16,16 @@
 
 .globalBG {
   background-image: url(./Assets/Svg/1.png);
-  background-size: 310px;
+  background-size: 200px, auto;
 }
 
+.bannarBG {
+
+  background-image: url(./Assets/Svg/1.png), linear-gradient(to right, #1b3330, #463a24);
+  background-position: 0 0, 0 0;
+  background-size: 200px, auto;
+
+}
 
 .ghostBtn {
 

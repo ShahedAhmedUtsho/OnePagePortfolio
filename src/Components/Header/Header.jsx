@@ -1,17 +1,23 @@
 import { AlignJustify, Moon, Sun, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { AuthContext } from '../../Privider/Provider';
 
 const Header = () => {
+    const {dark, setDark,handleMood} = useContext(AuthContext)
     const [lastScrollPosition, setLastScrollPosition] = useState(window.pageYOffset);
     const [visible, setVisible] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [toggle, setToggle] = useState(false);
 
-    const [dark, setDark] = useState(() => {
-        return localStorage.getItem("darkMode") === "true";
-    });
-    
+
+
+
+
+
+
+
+
     const toggleBar = () => {
         setIsOpen(!isOpen);
     };
@@ -38,18 +44,7 @@ const Header = () => {
         };
     }, [lastScrollPosition]);
 
-    const handleMood = () => {
-        setDark(!dark);
-    };
-
-    useEffect(() => {
-        if (dark) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-        localStorage.setItem('darkMode', dark);
-    }, [dark]);
+   
 
     return (
         <>
