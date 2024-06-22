@@ -6,23 +6,23 @@ import cercleLight from '../../../Assets/Images/cercleLight.png'
 import { AuthContext } from '../../../Privider/Provider';
 const BannarGrid = () => {
 const {dark} = useContext(AuthContext)
-const profile = dark? ProfileDark : ProfileLight ; 
+const profile = dark? cercleDark : cercleDark ; 
 
 
 
 
 
     return (
-        <div className='grid min-h-96 gap-3 bg-indigo-200   dark:bg-slate-800  grid-cols-12 globalBG my-4  rounded-sm *:rounded-sm p-6 box-border'>
-    <div className='border bannarCard   border-black w-full col-span-3 row-span-5 overflow-hidden  '>
-        <img src={profile} className='   object-cover  w-full  h-full' alt="" />
+        <div className='grid lg:max-h-96 max-h-[400px]   gap-3 bg-indigo-200  dark:bg-slate-800  lg:grid-rows-3 md:grid-rows-4 md:grid-cols-4    lg:grid-cols-12 globalBG my-4  rounded-sm *:rounded-sm lg:p-6 p-4 box-border'>
+    <div className='border bannarCard   md:row-span-2 md:order-1 order-3  border-black w-full   lg:col-span-3 lg:row-span-5 col-span-1 overflow-hidden  '>
+        <img src={profile} className='    object-cover  w-full  h-full' alt="" />
 
     </div>
-    <div className='border bannarCard border-black w-full col-span-9  row-span-1'>
+    <div className='border bannarCard  border-black w-full md:col-span-3 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9  order-1   lg:row-span-1'>
     </div>
-    <div className='border bannarCard border-black w-full col-span-6   row-span-4'>
+    <div className='border bannarCard  border-black w-full md:row-span-2 lg:order-3 md:order-2 md:col-span-3    lg:col-span-6 order-3   lg:row-span-4'>
     </div>
-    <div className='border bannarCard border-black w-full col-span-3 row-span-4'>
+    <div className='border bannarCard  border-black w-full md:row-span-2  lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4'>
     </div>
   </div>
     );

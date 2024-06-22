@@ -94,7 +94,7 @@ const Header = () => {
             {isOpen && (
 
 
-                <div className='w-full flex flex-col lg:hidden fixed bg-indigo-100 dark:bg-slate-900  globalBG pt-20 h-screen'>
+                <div className='w-full flex flex-col z-[888] lg:hidden fixed bg-indigo-100 dark:bg-slate-900  globalBG pt-20 h-screen'>
                     
                     {["project", "templates", "components", "blog"].map((a, index) => (
                         <NavLink onClick={toggleBar} className='text-sm text-left align-bottom px-5 py-2 ark:text-slate-400 text-slate-700 dark:hover:text-slate-200   hover:text-slate-900 hover:font-black  leading-5' key={index} to={`/${a}`}>

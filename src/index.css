@@ -37,7 +37,7 @@
   background: url(./Assets/Svg/1.png), linear-gradient(-89.99999881140911deg, rgba(0, 170, 255, .04) 0%, rgba(0, 170, 255, .019999999552965164) 100%);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  
+
   border: .75px solid rgb(252 252 252 / 5%);
   background-position: 0 0, 0 0;
   background-size: 200px, auto;
