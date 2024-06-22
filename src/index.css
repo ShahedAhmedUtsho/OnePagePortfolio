@@ -50,7 +50,7 @@
   font-family: 'Input Sans', sans-serif;
   font-weight: 300;
   line-height: 88px;
-  text-transform: none;
+
   background-image: linear-gradient(to right, #f29871, #ff4d4d);
   -webkit-background-clip: text;
   color: transparent;

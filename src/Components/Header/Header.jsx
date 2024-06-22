@@ -61,13 +61,23 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className='flex lg:justify-between justify-end items-center w-full'>
-                        <nav className='capitalize hidden lg:block'>
+
+
+
+                        <ul className=' hidden lg:block '>
                             {["project", "templates", "components", "blog"].map((a, index) => (
-                                <NavLink className='text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700 dark:hover:text-slate-200  hover:text-slate-900 hover:font-black leading-5' key={index} to={`/${a}`}>
-                                    <span className='font-input-sans capitalize'>{a}</span>
+                               <li key={index} className=' inline-block'>
+                                 <NavLink  to={`/${a}`} className='text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700  dark:hover:text-slate-200  hover:text-slate-900 hover:font-black capitalize leading-5' >
+                                   {`${a}`}
                                 </NavLink>
+                               </li>
                             ))}
-                        </nav>
+                              
+                
+                        </ul>
+
+
+
                         <div className="flex gap-3">
                             <button onClick={handleMood} className='px-2 text-base dark:text-indigo-300'>
                                 {dark ? <Sun size={18} /> : <Moon size={18} />}
@@ -87,7 +97,10 @@ const Header = () => {
             </div>
 
             {isOpen && (
+
+
                 <div className='w-full flex flex-col lg:hidden fixed bg-indigo-100 dark:bg-slate-900  globalBG pt-20 h-screen'>
+                    
                     {["project", "templates", "components", "blog"].map((a, index) => (
                         <NavLink onClick={toggleBar} className='text-sm text-left align-bottom px-5 py-2 ark:text-slate-400 text-slate-700 dark:hover:text-slate-200   hover:text-slate-900 hover:font-black  leading-5' key={index} to={`/${a}`}>
                             <span className='font-input-sans capitalize'>{a}</span>
