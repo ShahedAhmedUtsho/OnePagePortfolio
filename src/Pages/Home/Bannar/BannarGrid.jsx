@@ -93,7 +93,7 @@ const BannarGrid = () => {
 
 
 
-        <div className='border bannarCard border-black min-h-44 w-full md:col-span-2 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9 order-1 lg:row-span-1'>
+        <div className='border bannarCard border-black md:min-h-fit min-h-44 w-full md:col-span-2 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9 order-1 lg:row-span-1'>
           <div className='grid  grid-cols-1 lg:grid-cols-5 w-full h-full p-2 gap-2 items-center justify-center'>
             <div className='col-span-1 bannar-grid2-listItem commonBox w-full h-full flex justify-center items-center gap-2'>
               <div>
@@ -144,7 +144,7 @@ const BannarGrid = () => {
 
 
 
-        <div className='border bannarCard  min-h-52  border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-2 lg:col-span-3 order-4  lg:row-span-4 relative overflow-hidden'>
+        <div className='border bannarCard  min-h-52 md:min-h-fit  border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-2 lg:col-span-3 order-4  lg:row-span-4 relative overflow-hidden'>
     
 <canvas ref={canvas} width="600" className='max-w-72 absolute -z-10 top-0 right-0 ' height="600"></canvas>
 <div className='flex w-full   p-2 gap-1'>
