@@ -9,7 +9,7 @@ import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import createGlobe from 'cobe'
 
 import { AuthContext } from '../../../Privider/Provider';
-import { Clock, Download, Locate, LocateIcon } from 'lucide-react';
+import { Clock, Download, Locate, LocateIcon, MapPin } from 'lucide-react';
 
 const BannarGrid = () => {
   const canvas = useRef()
@@ -63,29 +63,56 @@ const BannarGrid = () => {
         <div className='border bannarCard md:row-span-2 md:order-1 order-3 border-black w-full lg:col-span-3 lg:row-span-5 col-span-1 overflow-hidden'>
           <img src={profile} className='object-cover w-full h-full' alt="" />
         </div>
+
+
+
         <div className='border bannarCard border-black w-full md:col-span-3 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9 order-1 lg:row-span-1'>
-          <div className='grid grid-cols-5 w-full h-full p-2 gap-2 items-center justify-center'>
+          <div className='grid  grid-cols-1 lg:grid-cols-5 w-full h-full p-2 gap-2 items-center justify-center'>
             <div className='col-span-1 bannar-grid2-listItem commonBox w-full h-full flex justify-center items-center gap-2'>
+
+
               <div>
                 <Lottie options={defaultOptions} height={20} width={20} />
               </div>
               <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Available for work</h6>
             </div>
-            <div className='col-span-3 w-full flex justify-center items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
-              <LocateIcon size={12} className='dark:text-teal-300 text-slate-600' />
-              <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Ishwardi, Rajshahi, Bangladesh</h6>
+
+
+
+            <div className='lg:col-span-3 w-full flex justify-center items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
+              <Clock size={12} className='dark:text-teal-300 text-slate-600' />
+              <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Ishwardi, Bangladesh</h6>
             </div>
-            <div onClick={() => { confetti() }} className='col-span-1 flex justify-center items-center transition-all duration-75 dark:hover:bg-teal-900 hover:bg-indigo-300 gap-2 w-full h-full bannar-grid2-listItem commonBox p-1'>
+
+
+            <button  onClick={() => { confetti() }} className='col-span-1 cursor-pointer flex justify-center items-center transition-all duration-75 dark:hover:bg-teal-900 hover:bg-indigo-300 gap-2 w-full h-full bannar-grid2-listItem commonBox p-1'>
               <Download size={12} className='dark:text-teal-300 text-slate-600' />
               <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">resume</h6>
-            </div>
+            </button>
+
+
+            
           </div>
         </div>
         <div className='border bannarCard border-black w-full md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'></div>
         <div className='border bannarCard border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4 relative overflow-hidden'>
     
-<canvas ref={canvas} width="600" className='max-w-72 absolute top-0 right-0 ' height="600"></canvas>
+<canvas ref={canvas} width="600" className='max-w-72 absolute -z-10 top-0 right-0 ' height="600"></canvas>
+<div className='flex w-full   p-2 gap-1'>
 
+<div   className='col-span-4 w-4/5 z-20  flex justify-start items-center transition-all duration-75  gap-2     py-2 px-4  bannar-grid2-listItem commonBox p-1'>
+
+
+
+<h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal cursor-default font-plex-sans">Ishwardi, Pabna</h6>
+</div>
+<div   className='w-1/5 z-20 flex justify-center     items-center transition-all duration-75  gap-1 py-2    text-center  bannar-grid2-listItem commonBox p'>
+
+
+<MapPin size={12} className='dark:text-teal-300 text-slate-600' />
+<h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal cursor-default font-plex-sans">BD</h6>
+</div>
+</div>
         </div>
       </div>
     </div>
