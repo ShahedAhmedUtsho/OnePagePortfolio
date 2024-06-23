@@ -78,13 +78,13 @@
 
 }
 
+.bannar-grid2-listItem {
+  background-image: linear-gradient(.0000026635723315848736deg, rgba(0, 170, 255, .05) 0%, rgba(13, 148, 136, 0.05) 100%);
+}
 
-
-
-
-
-
-
+.commonBox {
+  border: .75px solid rgb(252 252 252 / 5%)
+}
 
 
 
