@@ -13,7 +13,8 @@ const profile = dark? cercleDark : cercleDark ;
 
 
     return (
-        <div className='grid lg:max-h-96 max-h-[400px]        gap-3 bg-indigo-200  dark:bg-slate-800  lg:grid-rows-3 md:grid-rows-4 md:grid-cols-4    lg:grid-cols-12 globalBG my-4  rounded-sm *:rounded-sm lg:p-6 md:p-4 p-2 box-border'>
+       <div className='my-4 p-[0.5px] rounded-sm   bg-gradient-to-tr dark:from-slate-600 dark:to-teal-600   '>
+         <div className='grid lg:max-h-96 max-h-[400px]        gap-3 bg-indigo-200  dark:bg-slate-800  lg:grid-rows-3 md:grid-rows-4 md:grid-cols-4    lg:grid-cols-12 globalBG   rounded-sm *:rounded-sm lg:p-6 md:p-4 p-2 box-border'>
     <div className='border bannarCard   md:row-span-2 md:order-1 order-3  border-black w-full   lg:col-span-3 lg:row-span-5 col-span-1 overflow-hidden  '>
         <img src={profile} className='    object-cover  w-full  h-full' alt="" />
 
@@ -25,6 +26,7 @@ const profile = dark? cercleDark : cercleDark ;
     <div className='border bannarCard  border-black w-full md:row-span-2  lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4'>
     </div>
   </div>
+       </div>
     );
 };
 
