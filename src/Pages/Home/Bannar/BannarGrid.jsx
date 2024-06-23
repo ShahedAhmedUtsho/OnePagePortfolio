@@ -82,11 +82,11 @@ const BannarGrid = () => {
     }
   }, []);
   //
-  const Hi =  dark? robot  : hand ;
+  // const Hi =  dark? robot  : hand ;
   
   return (
     <div className='my-4 p-[0.5px] rounded-sm bg-gradient-to-tr dark:from-slate-600 dark:to-teal-600'>
-      <div className='grid lg:max-h-96 max-h-[400px] gap-3 bg-indigo-200 dark:bg-slate-800 lg:grid-rows-5 md:grid-rows-4 md:grid-cols-4 lg:grid-cols-12 globalBG rounded-sm *:rounded-sm lg:p-6 md:p-4 p-2 box-border'>
+      <div className='grid lg:max-h-96 min-h-[1000px] md:min-h-96 gap-3 bg-indigo-200 dark:bg-slate-800 lg:grid-rows-5 md:grid-rows-4 md:grid-cols-4 lg:grid-cols-12 globalBG rounded-sm *:rounded-sm lg:p-6 md:p-4 p-2 box-border'>
         <div className='border bannarCard md:row-span-2 md:order-1 order-3 border-black w-full lg:col-span-3 lg:row-span-5 col-span-1 overflow-hidden'>
           <img src={profile} className='object-cover w-full h-full' alt="" />
         </div>
@@ -117,20 +117,27 @@ const BannarGrid = () => {
           </div>
         </div>
         
-        <div className='border bannarCard border-black w-full p-4 md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'>
-        <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans opacity-60 uppercase">Hi there, am</h6>
-        <div className="text-2xl md:text-4xl font-semibold leading-tight flex  md:leading-snug tracking-tight md:tracking-normal   font-input-sans dark:text-slate-200 text-slate-800 relative"><h2 className=''>Shahed Ahmed </h2>
-       {dark?<div className=" w-20  relative -top-5  ">
-       
-       <Lottie  options={robot}  />
-       </div>:<div className=" w-16  relative -top-4  left-3  ">
-       
-       <Lottie  options={hand}  />
-       </div>}
-          </div> 
+        <div className='border bannarCard  border-black w-full p-4 md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'>
 
-{/* <div className="text-xl md:text-3xl font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 4</div>
-<div className="text-lg md:text-2xl font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 5</div> */}
+          
+        <h6 className="text-base md:text-xs mb-[0.5px] font-black dark:text-slate-400  text-slate-500 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans uppercase">Hi there, I am</h6>
+<div className="text-2xl md:text-4xl font-semibold leading-tight flex md:leading-snug tracking-tight md:tracking-normal font-input-sans dark:text-slate-200 text-slate-800 relative">
+  <h2 className=''>Shahed Ahmed</h2>
+  {dark ? 
+    <div className="w-20 relative -mb-4 -top-5">
+      <Lottie options={robot} />
+    </div> :
+    <div className="w-16 relative -top-4 left-3">
+      <Lottie options={hand} />
+    </div>
+  }
+</div>
+
+<div className="text-sm -mt-2 md:text-base dark:text-slate-400  text-slate-500  font-light leading-relaxed md:leading-loose tracking-normal md:tracking-wide font-plex-sans">
+  I am a <span className="font-black text-teal-300 ">MERN stack developer</span> specializing in <span className="underline font-black text-teal-300 ">front-end development</span>. With a strong focus on creating <span className="underline font-black text-teal-300">responsive websites</span> , I excel in <span className="font-bold underline font-input-sans ">React.js</span> and <span className="ont-bold underline font-input-sans ">Tailwind CSS</span> to build visually appealing and user-friendly interfaces. I also have experience with <span className="ont-bold underline font-input-sans ">MongoDB</span>, <span className="ont-bold underline font-input-sans ">Node.js</span>, and <span className="ont-bold underline font-input-sans">Express.js</span> to create seamless and efficient back-end solutions.
+</div>
+
+
 
         </div>
 
