@@ -48,10 +48,10 @@ const Header = () => {
 
     return (
         <>
-            <div className={`w-full globalBG fixed left-0 transition-transform z-[999] duration-300 ${visible ? "top-0" : "-top-20"} right-0 m-auto border-b border-slate-500 bg-indigo-100 dark:bg-slate-900 leading-6 min-h-[72px] md:px-10 flex font-input-sans items-center`}>
+            <div className={`w-full globalBG fixed left-0 transition-transform z-[999] duration-300 ${visible ? "top-0" : "-top-20"} right-0 m-auto border-b border-slate-500 bg-indigo-100 dark:bg-slate-900 leading-6 min-h-14 px-2 md:min-h-[72px] md:px-10 flex font-input-sans items-center`}>
                 <div className='flex gap-3 items-center w-full h-full'>
                     <div className='logo flex items-center'>
-                        <Link to="/" className='font-input-sans text-3xl dark:text-slate-400'>
+                        <Link to="/" className='font-input-sans text-lg  md:text-3xl dark:text-slate-400'>
                             Shahed
                         </Link>
                     </div>
@@ -67,8 +67,6 @@ const Header = () => {
                                 </NavLink>
                                </li>
                             ))}
-                              
-                
                         </ul>
 
 
@@ -84,7 +82,7 @@ const Header = () => {
                                 Join
                             </button>
                             <button onClick={toggleBar} className='lg:hidden text-indigo-800 dark:text-indigo-300 '>
-                                {isOpen ? <X size={28} className='dark:text-white text-black' /> : <AlignJustify size={28} className='dark:text-white text-black' />}
+                                {isOpen ? <X size={24}  className='dark:text-white text-black' /> : <AlignJustify size={24} className='dark:text-white text-black' />}
                             </button>
                         </div>
                     </div>
