@@ -82,9 +82,9 @@ const BannarGrid = () => {
           </div>
         </div>
         <div className='border bannarCard border-black w-full md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'></div>
-        <div className='border bannarCard border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4 overflow-hidden'>
+        <div className='border bannarCard border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4 relative overflow-hidden'>
     
-<canvas ref={canvas} width="600" height="600"></canvas>
+<canvas ref={canvas} width="600" className='max-w-72 absolute top-0 right-0 ' height="600"></canvas>
 
         </div>
       </div>
