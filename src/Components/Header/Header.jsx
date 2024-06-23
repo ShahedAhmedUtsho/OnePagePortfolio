@@ -75,10 +75,10 @@ const Header = () => {
                             <button onClick={handleMood} className='px-2 text-base dark:text-indigo-300'>
                                 {dark ? <Sun size={18} /> : <Moon size={18} />}
                             </button>
-                            <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200  hover:text-slate-900 hover:font-black font-input-sans text-sm'>
+                            <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200  hover:text-slate-900  font-input-sans text-sm'>
                                 Log in
                             </button>
-                            <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200  hover:text-slate-900 hover:font-black font-input-sans text-sm'>
+                            <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200  hover:text-slate-900  font-input-sans text-sm'>
                                 Join
                             </button>
                             <button onClick={toggleBar} className='lg:hidden text-indigo-800 dark:text-indigo-300 '>
