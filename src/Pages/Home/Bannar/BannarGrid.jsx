@@ -61,7 +61,7 @@ const BannarGrid = () => {
         height: 600,
         phi: 0,
         speed: 1,
-        theta: .3,
+        theta:0,
         dark: 0,
         diffuse: 2,
         mapSamples: 20000,
@@ -71,6 +71,7 @@ const BannarGrid = () => {
         glowColor: [0.8, 0.8, 1], // Change this for different glow color
         offset: [0, 0],
         markers: [
+          { location: [23.6850, 90.3563], size: 0.07 }, // Bangladesh
           { location: [37.7595, -122.4367], size: 0.03 },
           { location: [40.7128, -74.006], size: 0.1 },
         ],
