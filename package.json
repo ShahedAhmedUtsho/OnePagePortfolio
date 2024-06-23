@@ -17,6 +17,7 @@
     "lottie-web": "^5.12.2",
     "lucide-react": "^0.396.0",
     "match-sorter": "^6.3.4",
+    "moment-timezone": "^0.5.45",
     "phosphor-react": "^1.4.1",
     "postcss": "^8.4.38",
     "prop-types": "^15.8.1",

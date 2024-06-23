@@ -4,10 +4,12 @@ import ProfileLight from '../../../Assets/Images/normalLight.png';
 import cercleDark from '../../../Assets/Images/cercleDark.png';
 import cercleLight from '../../../Assets/Images/cercleLight.png';
 import GreenDot from '../../../Assets/Images/greenDot.json';
+import HiRobot from '../../../Assets/Images/HiRobot.json';
+import HiHand from '../../../Assets/Images/HiHand 2.json';
 import Lottie from 'react-lottie';
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import createGlobe from 'cobe'
-
+import moment from 'moment';
 import { AuthContext } from '../../../Privider/Provider';
 import { Clock, Download, Locate, LocateIcon, MapPin } from 'lucide-react';
 
@@ -15,6 +17,8 @@ const BannarGrid = () => {
   const canvas = useRef()
   const { dark } = useContext(AuthContext);
   const profile = dark ? cercleDark : cercleLight;
+  
+  const [currentTime, setCurrentTime] = useState(moment().format('dddd, MMMM D, YYYY hh:mm:ss A'));
 
   const defaultOptions = {
     loop: true,
@@ -24,7 +28,30 @@ const BannarGrid = () => {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
-  
+  const robot = {
+    loop: true,
+    autoplay: true,
+    animationData: HiRobot,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+    
+  };
+  const hand = {
+    loop: true,
+    autoplay: true,
+    animationData: HiHand,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(moment().format('dddd, MMMM D, YYYY hh:mm:ss A'));
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   useEffect(() => {
     if (canvas.current) {
       let phi = 0;
@@ -54,8 +81,8 @@ const BannarGrid = () => {
       });
     }
   }, []);
-
-
+  //
+  const Hi =  dark? robot  : hand ;
   
   return (
     <div className='my-4 p-[0.5px] rounded-sm bg-gradient-to-tr dark:from-slate-600 dark:to-teal-600'>
@@ -69,19 +96,15 @@ const BannarGrid = () => {
         <div className='border bannarCard border-black w-full md:col-span-3 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9 order-1 lg:row-span-1'>
           <div className='grid  grid-cols-1 lg:grid-cols-5 w-full h-full p-2 gap-2 items-center justify-center'>
             <div className='col-span-1 bannar-grid2-listItem commonBox w-full h-full flex justify-center items-center gap-2'>
-
-
               <div>
                 <Lottie options={defaultOptions} height={20} width={20} />
               </div>
               <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Available for work</h6>
             </div>
 
-
-
             <div className='lg:col-span-3 w-full flex justify-center items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
               <Clock size={12} className='dark:text-teal-300 text-slate-600' />
-              <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Ishwardi, Bangladesh</h6>
+              <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">{currentTime}</h6>
             </div>
 
 
@@ -91,10 +114,29 @@ const BannarGrid = () => {
             </button>
 
 
-            
           </div>
         </div>
-        <div className='border bannarCard border-black w-full md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'></div>
+        
+        <div className='border bannarCard border-black w-full p-4 md:row-span-2 lg:order-3 md:order-2 md:col-span-3 lg:col-span-6 order-3 lg:row-span-4'>
+        <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans opacity-60 uppercase">Hi there, am</h6>
+        <div className="text-2xl md:text-4xl font-semibold leading-tight flex  md:leading-snug tracking-tight md:tracking-normal   font-input-sans dark:text-slate-200 text-slate-800 relative"><h2 className=''>Shahed Ahmed </h2>
+       {dark?<div className=" w-20  relative -top-5  ">
+       
+       <Lottie  options={robot}  />
+       </div>:<div className=" w-16  relative -top-4  left-3  ">
+       
+       <Lottie  options={hand}  />
+       </div>}
+          </div> 
+
+{/* <div className="text-xl md:text-3xl font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 4</div>
+<div className="text-lg md:text-2xl font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Heading 5</div> */}
+
+        </div>
+
+
+
+
         <div className='border bannarCard border-black w-full md:row-span-2 lg:order-4 md:order-4 md:col-span-1 lg:col-span-3 order-4  lg:row-span-4 relative overflow-hidden'>
     
 <canvas ref={canvas} width="600" className='max-w-72 absolute -z-10 top-0 right-0 ' height="600"></canvas>
