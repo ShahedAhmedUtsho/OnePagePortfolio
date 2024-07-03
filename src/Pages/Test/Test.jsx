@@ -41,6 +41,7 @@ const HomePage = () => {
       </section>
       
       <section id="projects" className="pt-20 min-h-screen ">
+      <div className="text-lg md:text-2xl mt-5 font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal   font-input-sans mb-2 dark:text-slate-200 text-slate-800"> Projects</div>
        <ProjectsSection/>
       </section>
       <section id="skills" className="pt-20 min-h-screen ">
