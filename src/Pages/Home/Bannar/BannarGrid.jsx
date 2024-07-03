@@ -109,10 +109,10 @@ const BannarGrid = () => {
             </div>
 
 
-            <button  onClick={() => { confetti() }} className='col-span-1 cursor-pointer flex justify-center items-center transition-all duration-75 dark:hover:bg-teal-900 hover:bg-indigo-300 gap-2 w-full h-full bannar-grid2-listItem commonBox p-1'>
+            <a  href='resume.pdf' download="Shahed_Ahmed_Resume.pdf" onClick={() => { confetti() }} className='col-span-1 cursor-pointer flex justify-center items-center transition-all duration-75 dark:hover:bg-teal-900 hover:bg-indigo-300 gap-2 w-full h-full bannar-grid2-listItem commonBox p-1'>
               <Download size={12} className='dark:text-teal-300 text-slate-600' />
-              <h6 className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">resume</h6>
-            </button>
+              <p className="text-base md:text-xs font-black dark:text-slate-200 text-slate-800 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">resume</p>
+            </a>
 
 
           </div>

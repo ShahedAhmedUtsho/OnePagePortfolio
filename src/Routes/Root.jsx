@@ -1,12 +1,40 @@
 
+import { useEffect, useState } from 'react';
 import Header from '../Components/Header/Header';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
+import OnHeader from '../Components/OnHeader/OnHeader';
+
+
+
+
+
 
 const Root = () => {
+    const location = useLocation()
+    const [isTest,setIsTest] = useState(false) ;
+    useEffect(() => {
+     if(location.pathname === "/test"){
+        setIsTest(true)
+        console.log("yes")
+     }else{
+        setIsTest(false) ;
+        console.log("no")
+     }
+    
+      return () => {
+        
+      }
+    },[isTest,location.pathname])
+    
+
+
+
+
+
     return (
         <div className=' transition-all  ' >
-           <Header/>
-           
+          {!isTest && <OnHeader></OnHeader> }
+           {}
            <Outlet/>
         </div>
     );

@@ -40,10 +40,10 @@ const Social = () => {
             </a>
 
 
-            <button  onClick={() => {  }} className='col-span-1  lg:col-start-8   cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400  gap-2 w-full h-full bg-[#376da4] dark:bg-teal-500 commonBox p-1'>
+            <a  href='#contact' className='col-span-1  lg:col-start-8   cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400  gap-2 w-full h-full bg-[#376da4] dark:bg-teal-500 commonBox p-1'>
               <MoveUpRight size={12} className='dark:text-slate-900 text-slate-200' />
               <h6 className="text-base md:text-xs font-black dark:text-slate-900 text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal  font-input-sans">Contact</h6>
-            </button>
+            </a>
 
 
       </div>

@@ -87,8 +87,44 @@
 }
 
 
+/* src/components/HomePage.css */
 
+html {
+  scroll-behavior: smooth;
+}
 
+/* 
+header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 0.5rem;
+}
+
+nav ul li.active {
+  border-bottom: 2px solid blue;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  border-bottom: 1px solid #ccc;
+}
+
+ */
 
 
 

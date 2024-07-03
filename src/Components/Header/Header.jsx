@@ -60,7 +60,7 @@ const Header = () => {
 
 
                         <ul className=' hidden lg:block '>
-                            {["project", "templates", "components", "blog"].map((a, index) => (
+                            {["project", "templates", "components", "blog","test"].map((a, index) => (
                                <li key={index} className=' inline-block'>
                                  <NavLink  to={`/${a}`} className='text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700  dark:hover:text-slate-200  hover:text-slate-900 hover:font-black capitalize leading-5' >
                                    {`${a}`}
