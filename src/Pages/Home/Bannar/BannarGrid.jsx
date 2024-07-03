@@ -93,7 +93,6 @@ const BannarGrid = () => {
         </div>
 
 
-
         <div className='border bannarCard border-black md:min-h-fit min-h-44 w-full md:col-span-2 md:row-span-2 lg:order-2 md:order-3 lg:col-span-9 order-1 lg:row-span-1'>
           <div className='grid  grid-cols-1 lg:grid-cols-5 w-full h-full p-2 gap-2 items-center justify-center'>
             <div className='col-span-1 bannar-grid2-listItem commonBox w-full h-full flex justify-center items-center gap-2'>

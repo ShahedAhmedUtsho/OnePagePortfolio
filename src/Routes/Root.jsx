@@ -1,6 +1,5 @@
 
 import { useEffect, useState } from 'react';
-import Header from '../Components/Header/Header';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 import OnHeader from '../Components/OnHeader/OnHeader';
 

@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 import BannarGrid from '../Home/Bannar/BannarGrid';
 import OnHeader from '../../Components/OnHeader/OnHeader';
 import Social from '../Home/Social/Social';
+import ProjectsSection from '../Home/Projects/ProjectsSection';
 
 const HomePage = () => {
   const [activeSection, setActiveSection] = useState('about');
-  const sections = ['banner', 'projects',"skills", 'contact', 'about'];
+  const sections = ['home', 'projects',"skills", 'contact', 'about'];
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY + 200;
@@ -32,7 +33,7 @@ const HomePage = () => {
     <div className="font-sans">
       <OnHeader activeSection={activeSection} />
 
-      <section id="banner" className=" min-h-screen ">
+      <section id="home" className=" -mb-20 min-h-fit ">
         <div className=' lg:mx-auto'>
           <BannarGrid/>
           <Social/>
@@ -40,8 +41,7 @@ const HomePage = () => {
       </section>
       
       <section id="projects" className="pt-20 min-h-screen ">
-        <h1 className="text-4xl">Projects</h1>
-        <p className="mt-4">Our projects section.</p>
+       <ProjectsSection/>
       </section>
       <section id="skills" className="pt-20 min-h-screen ">
         <h1 className="text-4xl">skills</h1>
