@@ -49,12 +49,12 @@ const OnHeader = ({ activeSection }) => {
               <button onClick={handleMood} className='px-2 text-base dark:text-indigo-300'>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
+              <Link to="/login" className='ghostBtn btn self-end hidden lg:inline-block dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
                 Log in
-              </button>
-              <button className='ghostBtn btn self-end hidden lg:inline-block dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
+              </Link>
+              <Link to="/register" className='ghostBtn btn self-end hidden lg:inline-block dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
                 Join
-              </button>
+              </Link>
               <button onClick={toggleBar} className='lg:hidden text-indigo-800 dark:text-indigo-300 '>
                 {isOpen ? <X size={24} className='dark:text-white text-black' /> : <AlignJustify size={24} className='dark:text-white text-black' />}
               </button>
@@ -70,12 +70,12 @@ const OnHeader = ({ activeSection }) => {
               <span className='font-input-sans capitalize'>{a}</span>
             </a>
           ))}
-          <button className='ghostBtn btn mx-5 my-2 dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black font-input-sans text-sm'>
+          <Link to="/login" className='ghostBtn btn mx-5 my-2 dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black font-input-sans text-sm'>
             Log in
-          </button>
-          <button className='ghostBtn btn mx-5 my-2 dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black font-input-sans text-sm'>
+          </Link>
+          <Link to="/register" className='ghostBtn btn mx-5 my-2 dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black font-input-sans text-sm'>
             Join
-          </button>
+          </Link>
         </div>
       )}
     </>

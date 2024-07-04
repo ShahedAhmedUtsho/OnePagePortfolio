@@ -9,6 +9,8 @@ import Root from './Routes/Root';
 import Provider from './Privider/Provider';
 import Home from './Pages/Home/Home';
 import Test from './Pages/Test/Test';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/",
     element: <Home/>,
+      },
+      {
+        path: "/login",
+    element: <Login/>,
+      },
+      {
+        path: "/register",
+    element: <Register/>,
       },
       {
         path: "/test",

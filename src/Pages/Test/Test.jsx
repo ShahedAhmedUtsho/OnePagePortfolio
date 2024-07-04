@@ -8,12 +8,15 @@ import ProjectsSection from '../Home/Projects/ProjectsSection';
 import Skills from '../Home/Skills/Skills';
 import Footer from '../../Components/Footer/Footer';
 import ContactMe from '../Home/Contact/ContactMe';
+import { useLocation } from 'react-router-dom';
 
 
 
 const HomePage = () => {
+  const location = useLocation()
+  
   const [activeSection, setActiveSection] = useState("");
-  const sections = ['home', 'projects',"skills", 'contact', 'about'];
+  const sections = ['home', 'projects',"skills","about", 'contact'];
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY + 200;
@@ -36,7 +39,11 @@ const HomePage = () => {
 
   return (
     <div className="font-sans">
-      <OnHeader activeSection={activeSection} />
+{
+  location.pathname !== "/login" && "/register"  &&  <OnHeader activeSection={activeSection} />
+}
+
+    
 
       <section id="home" className=" -mb-20 min-h-fit ">
         <div className=' lg:mx-auto'>
@@ -57,7 +64,7 @@ const HomePage = () => {
         <h1 className="text-4xl">About</h1>
         <p className="mt-4">About us section.</p>
       </section>
-      <section id="contact" className="pt-20 min-h-fit py-10 ">
+      <section id="contact" className="py-20 min-h-fit py-10 ">
      <ContactMe/>
       </section>
       
