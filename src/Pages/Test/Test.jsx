@@ -6,10 +6,13 @@ import OnHeader from '../../Components/OnHeader/OnHeader';
 import Social from '../Home/Social/Social';
 import ProjectsSection from '../Home/Projects/ProjectsSection';
 import Skills from '../Home/Skills/Skills';
+import Footer from '../../Components/Footer/Footer';
+import ContactMe from '../Home/Contact/ContactMe';
+
 
 
 const HomePage = () => {
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState("");
   const sections = ['home', 'projects',"skills", 'contact', 'about'];
 
   const handleScroll = () => {
@@ -46,7 +49,7 @@ const HomePage = () => {
       <div className="text-lg md:text-2xl mt-5 font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal    font-input-sans  dark:text-slate-200 text-slate-800"> Projects</div>
        <ProjectsSection/>
       </section>
-      <section id="skills" className=" pt-20 min-h-screen ">
+      <section id="skills" className=" pt-20 min-h-fit ">
       <div className="text-lg md:text-2xl mt-5 font-medium leading-tight md:leading-snug tracking-tight md:tracking-normal   font-input-sans mb-2 dark:text-slate-200 text-slate-800"> Skills</div>
        <Skills/>
       </section>
@@ -54,10 +57,10 @@ const HomePage = () => {
         <h1 className="text-4xl">About</h1>
         <p className="mt-4">About us section.</p>
       </section>
-      <section id="contact" className="pt-20 min-h-screen ">
-        <h1 className="text-4xl">Contact</h1>
-        <p className="mt-4">Contact us section.</p>
+      <section id="contact" className="pt-20 min-h-fit py-10 ">
+     <ContactMe/>
       </section>
+      
     </div>
   );
 };
