@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, MoveUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="  globalBG bg-indigo-100  dark:bg-slate-900 p-[0.5px] ">
+    <footer className="  globalBG bg-indigo-100 min-h-56 flex flex-col  dark:bg-slate-900 p-[0.5px] ">
       <div className="flex flex-col  md:flex-row md:justify-between px-2 md:px-5 lg:px-10 items-center">
         <div className="text-center md:text-left">
           <h6 className="text-lg font-bold text-slate-900 dark:text-slate-200">Shahed Ahmed</h6>
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mt-4 text-slate-800 dark:text-slate-400 pb-5 text-sm">
+      <div className="text-center mt-auto  text-slate-800 dark:text-slate-400 pb-5 text-sm">
         &copy; {new Date().getFullYear()} Shahed Ahmed. All rights reserved.
       </div>
     </footer>

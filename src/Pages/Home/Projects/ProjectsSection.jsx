@@ -76,7 +76,7 @@ const ProjectsSection = () => {
             <div className="grid lg:grid-cols-12 w-full h-full gap-2 items-center justify-center p-3">
               <div navigation={"true"} className={`mySwiper rounded-sm relative min-h-80 mb-2 lg:mb-0 bannarCard h-full w-full col-span-12 lg:col-span-3 ${project.order.image}`}>
                 <div className="bg-cover bg-top bg-no-repeat h-full" style={{ backgroundImage: `url(${project.imageUrl})` }}>
-                  <img src="" alt="" />
+                
                 </div>
               </div>
               <div className={`min-h-80 rounded-sm bannarCard col-span-12 lg:col-span-9 ${project.order.content}`}>

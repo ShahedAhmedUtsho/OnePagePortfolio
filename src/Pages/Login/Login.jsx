@@ -136,7 +136,7 @@ const Login = () => {
               />
             )}
           />
-          <Button className='dark:text-slate-900 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" fullWidth type="submit">
+          <Button  className='dark:text-slate-900 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" fullWidth  type="submit">
             Login
           </Button>
         </Box>
