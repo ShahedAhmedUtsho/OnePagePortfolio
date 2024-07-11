@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+
 import {
   Container,
   Grid,
@@ -9,33 +11,58 @@ import {
   TextField,
   Button,
   Typography,
-  useTheme
+  useTheme,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle
 } from '@mui/material';
 import { AuthContext } from '../../../Privider/Provider'; // Adjust the path accordingly
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid email address').required('Required'),
+  from_name: Yup.string().required('Required'),
+  from_email: Yup.string().email('Invalid email address').required('Required'),
   message: Yup.string().required('Required'),
 });
 
 const ContactMe = () => {
   const { dark } = useContext(AuthContext);
   const theme = useTheme();
-
-  const { handleSubmit, control, formState: { errors } } = useForm({
+  const form = useRef();
+  const [open, setOpen] = useState(false); // State to control modal visibility
+  const { handleSubmit, control, reset, formState: { errors } } = useForm({
     resolver: yupResolver(validationSchema),
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    console.log(form.current);
+
+    emailjs.sendForm('Shahed_Ahmed_Utsho_Email', 'template_byq83c6', form.current, {
+        publicKey: 'WYhiwqDlnaUlNySxL',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          reset();
+          setOpen(true); // Open the modal on success
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const handleClose = () => {
+    setOpen(false); // Close the modal
   };
 
   const buttonBgColor = dark ? '#009688' : '#376da4'; // Default to custom colors
   const buttonHoverColor = dark ? '#00796b' : '#376da474';
 
   return (
-    <Container
+    <Container 
       className='globalBG bannarCard !rounded-sm dark:!bg-slate-800 !bg-indigo-100'
       maxWidth="md"
       sx={{
@@ -66,21 +93,22 @@ const ContactMe = () => {
                 color: dark ? theme.palette.grey[400] : theme.palette.grey[800],
               }}
             >
-              <div className="text-sm -mt-2 md:text-base dark:text-slate-400 cursor-default text-slate-600 font-light leading-relaxed md:leading-loose tracking-normal md:tracking-wide font-plex-sans">
+              <p className="text-sm -mt-2 md:text-base dark:text-slate-400 cursor-default text-slate-600 font-light leading-relaxed md:leading-loose tracking-normal md:tracking-wide font-plex-sans">
                 <span className="font-black text-teal-600 dark:text-teal-300"> thank you for Reach me</span>, If you have any questions or want to work with me, feel free to reach out using the form on the right.
-              </div>
+              </p>
             </Typography>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
+            ref={form}
             component="form"
             noValidate
             onSubmit={handleSubmit(onSubmit)}
             sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
           >
             <Controller
-              name="name"
+              name="from_name"
               control={control}
               defaultValue=""
               render={({ field }) => (
@@ -118,7 +146,7 @@ const ContactMe = () => {
               )}
             />
             <Controller
-              name="email"
+              name="from_email"
               control={control}
               defaultValue=""
               render={({ field }) => (
@@ -202,6 +230,21 @@ const ContactMe = () => {
           </Box>
         </Grid>
       </Grid>
+      <Dialog className='' open={open} onClose={handleClose}> 
+        <div className='bg-indigo-100 dark:bg-slate-800'>
+
+       
+        <DialogTitle className='  dark:!text-slate-200 !text-slate-800 font-input-sans'>Success</DialogTitle>
+        <DialogContent>
+          <DialogContentText className='font-plex-sans dark:!text-slate-400 !text-slate-600'>
+            Your message has been successfully sent. Thank you for reaching out!
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button className=' uppercase !text-teal-500 !border !border-teal-500' onClick={handleClose} color="primary">Close</Button>
+        </DialogActions>
+        </div>
+      </Dialog>
     </Container>
   );
 };
