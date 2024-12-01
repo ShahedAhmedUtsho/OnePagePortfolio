@@ -41,7 +41,11 @@ const AboutPage = () => {
 
 
 <div className="text-sm -mt-2 md:text-base dark:text-slate-400 cursor-default  text-slate-600  font-light leading-relaxed md:leading-loose tracking-normal md:tracking-wide font-plex-sans">
-hello , i am  <span className="font-black text-teal-600 dark:text-teal-300 ">Shahed Ahmed</span>  a passionate frontend developer from Ishwardi, Bangladesh. I aspire to become a proficient MERN stack developer, with a keen interest in Next.js for creating large-scale web applications.
+<div className="text-sm -mt-2 md:text-base dark:text-slate-400 cursor-default text-slate-600 font-light leading-relaxed md:leading-loose tracking-normal md:tracking-wide font-plex-sans">
+  Hi, I'm <span className="font-black text-teal-600 dark:text-teal-300">Shahed Ahmed</span>, a passionate software developer from Ishwardi, Bangladesh. I specialize in <span className="font-bold underline text-teal-600 dark:text-teal-300">TypeScript</span>, <span className="font-bold underline text-teal-600 dark:text-teal-300">JavaScript</span>, and <span className="font-bold underline text-teal-600 dark:text-teal-300">Swift</span> programming. My expertise spans backend solutions with <span className="font-bold underline text-teal-600 dark:text-teal-300">Node.js</span> and frontend development with <span className="font-bold underline text-teal-600 dark:text-teal-300">Next.js</span> and <span className="font-bold underline text-teal-600 dark:text-teal-300">React.js</span>. I focus on building scalable, high-performance software solutions that are both efficient and user-centric, with a particular interest in creating dynamic applications using the MERN stack.
+</div>
+
+
 <div className="mt-4">
                         <div className="text-sm dark:text-slate-400 text-slate-600 font-light leading-relaxed tracking-normal">
                           <span className="font-black font-input-sans text-teal-600 dark:text-teal-300">Education</span>
@@ -49,7 +53,7 @@ hello , i am  <span className="font-black text-teal-600 dark:text-teal-300 ">Sha
                         <ul className="list-disc list-inside">
                           {[`HSC Completion: Finished my Higher Secondary Certificate (HSC)`,
                           "Current Pursuit: Currently pursuing a BA degree.",
-                          "  Web Development Training: Completed comprehensive web development training from Programming Hero, focusing on the MERN stack."].map((feature, i) => (
+                          "Development Training: Completed comprehensive web development training from Programming Hero, focusing on the Building with application."].map((feature, i) => (
                             <li key={i}>{feature}</li>
                           ))}
                         </ul>

@@ -18,7 +18,7 @@ import {
   DialogContentText,
   DialogTitle
 } from '@mui/material';
-import { AuthContext } from '../../../Privider/Provider'; // Adjust the path accordingly
+import { AuthContext } from '../../../Privider/Provider'; 
 
 const validationSchema = Yup.object().shape({
   from_name: Yup.string().required('Required'),
@@ -30,7 +30,7 @@ const ContactMe = () => {
   const { dark } = useContext(AuthContext);
   const theme = useTheme();
   const form = useRef();
-  const [open, setOpen] = useState(false); // State to control modal visibility
+  const [open, setOpen] = useState(false);
   const { handleSubmit, control, reset, formState: { errors } } = useForm({
     resolver: yupResolver(validationSchema),
   });
@@ -55,10 +55,10 @@ const ContactMe = () => {
   };
 
   const handleClose = () => {
-    setOpen(false); // Close the modal
+    setOpen(false); 
   };
 
-  const buttonBgColor = dark ? '#009688' : '#376da4'; // Default to custom colors
+  const buttonBgColor = dark ? '#009688' : '#376da4'; 
   const buttonHoverColor = dark ? '#00796b' : '#376da474';
 
   return (
@@ -224,7 +224,7 @@ const ContactMe = () => {
                 />
               )}
             />
-            <Button className='col-span-1 dark:text-slate-900 lg:col-start-8 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" fullWidth type="submit">
+            <Button className='col-span-1 dark:text-slate-900 lg:col-start-8 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" aria-label='from submit' fullWidth type="submit">
               Submit
             </Button>
           </Box>
@@ -241,7 +241,7 @@ const ContactMe = () => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button className=' uppercase !text-teal-500 !border !border-teal-500' onClick={handleClose} color="primary">Close</Button>
+          <Button type='button' aria-label='close menu' className=' uppercase !text-teal-500 !border !border-teal-500' onClick={handleClose} color="primary">Close</Button>
         </DialogActions>
         </div>
       </Dialog>

@@ -10,16 +10,17 @@ const Footer = () => {
           <p className="text-sm text-slate-600 dark:text-slate-400">Frontend Developer & MERN Stack Enthusiast</p>
         </div>
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center transition-all duration-75 commonBox p-1 rounded-full">
-            <Github size={20} className="dark:text-slate-200 text-slate-800" />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center transition-all duration-75 commonBox p-1 rounded-full">
-            <Linkedin size={20} className="dark:text-slate-200 text-slate-800" />
-          </a>
-          <a href="mailto:shahed@example.com" className="flex justify-center items-center transition-all duration-75  commonBox p-1 rounded-full">
-            <Mail size={20} className="dark:text-slate-200 text-slate-800" />
-          </a>
-        </div>
+  <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex justify-center items-center transition-all duration-75 commonBox p-1 rounded-full">
+    <Github size={20} className="dark:text-slate-200 text-slate-800" />
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="flex justify-center items-center transition-all duration-75 commonBox p-1 rounded-full">
+    <Linkedin size={20} className="dark:text-slate-200 text-slate-800" />
+  </a>
+  <a href="mailto:shahed@example.com" aria-label="Email" className="flex justify-center items-center transition-all duration-75 commonBox p-1 rounded-full">
+    <Mail size={20} className="dark:text-slate-200 text-slate-800" />
+  </a>
+</div>
+
       </div>
 
       <div className="text-center mt-auto  text-slate-800 dark:text-slate-400 pb-5 text-sm">

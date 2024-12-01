@@ -12,7 +12,7 @@ import {
   useTheme
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { AuthContext } from '../../Privider/Provider'; // Adjust the path accordingly
+import { AuthContext } from '../../Privider/Provider'; 
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -175,7 +175,7 @@ const Register = () => {
               />
             )}
           />
-          <Button className='dark:text-slate-900 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" fullWidth type="submit">
+          <Button  aria-level="register button" className='dark:text-slate-900 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full !bg-[#376da4] dark:!bg-teal-500 commonBox p-1' color="primary" variant="contained" fullWidth type="submit">
             Register
           </Button>
         </Box>

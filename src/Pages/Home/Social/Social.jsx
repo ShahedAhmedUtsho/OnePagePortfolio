@@ -26,24 +26,25 @@ const Social = () => {
 
 
 
-            <a href='https://www.linkedin.com/in/shahedahmedutsho/' target='_blank' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85] box-border items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
-              <Linkedin size={12} className='text-teal-300 ' />
-              <h6 className="text-base md:text-xs font-black text-slate-200  leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Linkdin</h6>
-            </a>
-            <a href='https://github.com/ShahedAhmedUtsho' target='_blank' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85] items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
-              <Github size={12} className='text-teal-300 ' />
-              <h6 className="text-base md:text-xs font-black text-slate-200  leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Github</h6>
-            </a>
-            <a href='https://www.facebook.com/iAmShahedAhmed/' target='_blank' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85]  items-center gap-2 h-full bannar-grid2-listItem commonBox p-1'>
-              <Facebook  size={12} className='text-teal-300 ' />
-              <h6 className="text-base md:text-xs font-black text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans">Facebook</h6>
-            </a>
+            <a href='https://www.linkedin.com/in/shahedahmedutsho/' target='_blank' rel='noopener noreferrer' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85] box-border items-center gap-2 h-full bannar-grid2-listItem commonBox p-1' aria-label='LinkedIn'>
+  <Linkedin size={12} className='text-teal-300' />
+  <h6 className='text-base md:text-xs font-black text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans'>LinkedIn</h6>
+</a>
 
+<a href='https://github.com/ShahedAhmedUtsho' target='_blank' rel='noopener noreferrer' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85] items-center gap-2 h-full bannar-grid2-listItem commonBox p-1' aria-label='GitHub'>
+  <Github size={12} className='text-teal-300' />
+  <h6 className='text-base md:text-xs font-black text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans'>GitHub</h6>
+</a>
 
-            <a  href='#contact' className='col-span-1  lg:col-start-8   cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400  gap-2 w-full h-full bg-[#376da4] dark:bg-teal-500 commonBox p-1'>
-              <MoveUpRight size={12} className='dark:text-slate-900 text-slate-200' />
-              <h6 className="text-base md:text-xs font-black dark:text-slate-900 text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal  font-input-sans">Contact</h6>
-            </a>
+<a href='https://www.facebook.com/iAmShahedAhmed/' target='_blank' rel='noopener noreferrer' className='lg:col-span-1 w-full flex justify-center dark:hover:bg-teal-800 hover:bg-[#2c5d85] items-center gap-2 h-full bannar-grid2-listItem commonBox p-1' aria-label='Facebook'>
+  <Facebook size={12} className='text-teal-300' />
+  <h6 className='text-base md:text-xs font-black text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-plex-sans'>Facebook</h6>
+</a>
+
+<a href='#contact' className='col-span-1 lg:col-start-8 cursor-pointer flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 w-full h-full bg-[#376da4] dark:bg-teal-500 commonBox p-1' aria-label='Contact'>
+  <MoveUpRight size={12} className='dark:text-slate-900 text-slate-200' />
+  <h6 className='text-base md:text-xs font-black dark:text-slate-900 text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans'>Contact</h6>
+</a>
 
 
       </div>

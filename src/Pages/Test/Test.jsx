@@ -1,4 +1,4 @@
-// src/components/HomePage.js
+
 
 import React, { useState, useEffect } from 'react';
 import BannarGrid from '../Home/Bannar/BannarGrid';

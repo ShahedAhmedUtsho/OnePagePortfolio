@@ -11,6 +11,8 @@ import expressjs from '../../../../public/skills-icons/icons8-express-js.svg';
 import mongodb from '../../../../public/skills-icons/mongodb.svg';
 import js from '../../../../public/skills-icons/icons8-javascript.svg';
 
+
+
 const projectData = [
   {
     title: 'MediCamps',
@@ -20,14 +22,54 @@ const projectData = [
       'Responsive design for all devices',
       'Payment gateway'
     ],
-    imageUrl: 'https://i.ibb.co/LnJfd99/1718779217702.jpg',
+    imageUrl: 'https://i.ibb.co/XySVs4k/1718779217702.webp',
+    
     order: {
       image: 'lg:order-1',
       content: 'lg:order-2'
     },
-    codeUrl: 'https://github.com/ShahedAhmedUtsho/ShareBite', // Replace with actual URL
-    liveUrl: 'https://assignment-11-f266c.web.app/'  // Replace with actual URL
-  },
+    codeUrl: 'https://github.com/ShahedAhmedUtsho/medicamps', // Replace with actual URL
+    liveUrl: 'https://medicamps-01.web.app/'  // Replace with actual URL
+  },{
+    title: 'Zada Production',
+    description: 'At Zada Production, we specialize in driving business growth through comprehensive creative solutions. Our services include professional videography and photography for functions, state-of-the-art studio facilities, impactful digital marketing strategies, and cutting-edge website development. We are committed to delivering high-quality results that elevate your brand and connect you with your audience.',
+    features: [
+      'Digital Marketing: SEO, social media management, content marketing, PPC campaigns',
+      'Photography: Corporate portraits, product shots, event coverage',
+      'Videography: High-definition video content production',
+      'Web Development: Responsive, user-friendly, and optimized websites',
+      'Graphic Design: Creative and strategic designs',
+      'Editing: Professional photo and video editing services'
+    ],
+    imageUrl: 'https://res.cloudinary.com/dmcmxmqpw/image/upload/f_auto,q_auto/vm6juvxr1ac5b7hj3az3',
+    order: {
+      image: 'lg:order-2',
+      content: 'lg:order-1'
+    },
+    codeUrl: 'https://github.com/ShahedAhmedUtsho/Zada-Production', 
+    liveUrl: 'https://www.zadaproduction.tech/'  
+  }
+  ,
+  {
+    title: 'Classical Strings',
+    description: 'Classical Strings is a full-stack MERN project that offers a comprehensive platform for discovering premium classical guitars. Users can search, filter, categorize, and sort guitars based on various criteria such as brand, price range, and guitar type. The project includes server-side pagination, authentication with Firebase, and a fully responsive design.',
+    features: [
+      'Server-side pagination for efficient data loading',
+      'Search functionality based on product name',
+      'Filtering options by brand, category, and price range',
+      'Sorting by price and date added',
+      'Google and Email/Password Authentication using Firebase',
+      'Responsive design with a mobile-first approach'
+    ],
+    imageUrl: 'https://res.cloudinary.com/dmcmxmqpw/image/upload/f_auto,q_auto/afvu7fdiiqdmrbysiu8z', // replace with actual image URL
+    order: {
+      image: 'lg:order-1',
+      content: 'lg:order-2'
+    },
+    codeUrl: 'https://github.com/ShahedAhmedUtsho/Classical-String',
+    liveUrl: 'https://classical-strings.vercel.app/'
+  }
+,  
   {
     title: 'PicassoPallet',
     description: 'Picassopallet is a gateway to the world of art. Explore, create, and connect with artists and paintings that inspire you. This is a painting selling website where artists and art enthusiasts can come together to buy and sell paintings.',
@@ -38,13 +80,13 @@ const projectData = [
       'User Authentication',
       'Dark Mode and Light Mode'
     ],
-    imageUrl: 'https://i.ibb.co/ns1LS9z/screencapture-assignment-10-6777f-web-app-2024-07-04-01-57-14.png',
+    imageUrl: 'https://i.ibb.co/RgQmw3d/3.webp',
     order: {
       image: 'lg:order-2',
       content: 'lg:order-1'
     },
-    codeUrl: 'https://github.com/ShahedAhmedUtsho/picassoPallete', // Replace with actual URL
-    liveUrl: 'https://assignment-10-6777f.web.app/'  // Replace with actual URL
+    codeUrl: 'https://github.com/ShahedAhmedUtsho/picassoPallete', 
+    liveUrl: 'https://assignment-10-6777f.web.app/'  
   },
   {
     title: 'ShareBite',
@@ -54,7 +96,7 @@ const projectData = [
       'Responsive design for all devices',
       'Request and Donate food'
     ],
-    imageUrl: 'https://i.ibb.co/dGw66BN/screencapture-assignment-11-f266c-web-app-2024-07-04-02-20-09.png',
+    imageUrl: 'https://i.ibb.co/3FXDWbw/screencapture-assignment-11-f266c-web-app-2024-07-04-02-20-09.webp',
     order: {
       image: 'lg:order-1',
       content: 'lg:order-2'
@@ -75,7 +117,7 @@ const ProjectsSection = () => {
   return (
     <div>
       <Helmet>
-        <title>Projects - Shahed Ahmed</title>
+        <title>Shahed Ahmed - MERN Stack Developer</title>
         <meta name="description" content="Explore my portfolio projects including MediCamps, PicassoPallet, and ShareBite. Each project features user authentication, responsive design, and unique functionalities." />
       </Helmet>
       <div className="mt-2 md:p-[0.5px] rounded-sm bg-gradient-to-tr dark:from-slate-600 dark:to-teal-600">
@@ -119,11 +161,11 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                     <div className="absolute bottom-2 right-2 flex gap-2">
-                      <a href={project.codeUrl} target='_blank' rel="noopener noreferrer" className='cursor-pointer rounded-sm flex  dark:text-teal-500   justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 *:dark:hover:text-teal-800 !border-[#376da4]  dark:!border-teal-500 commonBox p-2'>
+                      <a href={project.codeUrl} aria-label='go to projects code' target='_blank' rel="noopener noreferrer" className='cursor-pointer rounded-sm flex  dark:text-teal-500   justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400 gap-2 *:dark:hover:text-teal-800 !border-[#376da4]  dark:!border-teal-500 commonBox p-2'>
                         <MoveUpRight size={12} className='dark:text-teal-500 text-[#376da4]' />
                         <h6 className="text-base md:text-xs font-black dark:text-teal-500  text-[#376da4] leading-tight mr-1 md:leading-snug tracking-tight md:tracking-normal font-input-sans">Code</h6>
                       </a>
-                      <a href={project.liveUrl} target='_blank' rel="noopener noreferrer" className='cursor-pointer rounded-sm flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400   gap-2 bg-[#376da4] dark:bg-teal-500 commonBox p-2'>
+                      <a href={project.liveUrl} aria-label='go to project live site'  target='_blank' rel="noopener noreferrer" className='cursor-pointer rounded-sm flex justify-center items-center transition-all duration-75 hover:bg-[#376da474] dark:hover:bg-teal-400   gap-2 bg-[#376da4] dark:bg-teal-500 commonBox p-2'>
                         <MoveUpRight size={12} className='dark:text-slate-900 text-slate-200' />
                         <h6 className="text-base md:text-xs mr-1 font-black dark:text-slate-900 text-slate-200 leading-tight md:leading-snug tracking-tight md:tracking-normal font-input-sans">Live</h6>
                       </a>

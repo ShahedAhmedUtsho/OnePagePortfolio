@@ -38,7 +38,7 @@ const OnHeader = ({ activeSection }) => {
             <ul className='hidden lg:block'>
               {["projects", "skills","about", "contact"].map((a, index) => (
                 <li key={index} className='inline-block'>
-                  <a href={`#${a}`} className={`text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black capitalize leading-5 ${activeSection === a && 'dark:!text-slate-200 !text-slate-900'  }`}>
+                  <a href={`#${a}`} aria-label='link item' className={`text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black capitalize leading-5 ${activeSection === a && 'dark:!text-slate-200 !text-slate-900'  }`}>
                     {`${a}`}
                   </a>
                 </li>
@@ -46,7 +46,7 @@ const OnHeader = ({ activeSection }) => {
             </ul>
 
             <div className="flex gap-3">
-              <button onClick={handleMood} className='px-2 text-base dark:text-indigo-300'>
+              <button  onClick={handleMood} aria-label='change theme mode' type='button' className='px-2 text-base dark:text-indigo-300'>
                 {dark ? <Sun size={18} /> : <Moon size={18} />}
               </button>
               <Link to="/login" className='ghostBtn btn self-end hidden lg:inline-block dark:text-slate-400 text-slate-700 hover:bg-indigo-400 hover:bg-opacity-30 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
@@ -55,7 +55,7 @@ const OnHeader = ({ activeSection }) => {
               <Link to="/register" className='ghostBtn btn self-end hidden lg:inline-block dark:text-indigo-300 text-indigo-800 hover:bg-opacity-10 hover:bg-indigo-400 dark:hover:text-slate-200 hover:text-slate-900 font-input-sans text-sm'>
                 Join
               </Link>
-              <button onClick={toggleBar} className='lg:hidden text-indigo-800 dark:text-indigo-300 '>
+              <button onClick={toggleBar} aria-label=' navigation Hamburger menu' className='lg:hidden text-indigo-800 dark:text-indigo-300 '>
                 {isOpen ? <X size={24} className='dark:text-white text-black' /> : <AlignJustify size={24} className='dark:text-white text-black' />}
               </button>
             </div>
@@ -66,7 +66,7 @@ const OnHeader = ({ activeSection }) => {
       {isOpen && (
         <div className='w-full flex flex-col z-[888] lg:hidden fixed bg-indigo-100 dark:bg-slate-900 globalBG pt-20 h-screen'>
           {[ "projects", "skills","about", "contact"].map((a, index) => (
-            <a onClick={toggleBar} className='text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black leading-5' key={index} href={`#${a}`}>
+            <a onClick={toggleBar} aria-label='toggle bar' className='text-sm text-left align-bottom px-5 py-2 dark:text-slate-400 text-slate-700 dark:hover:text-slate-200 hover:text-slate-900 hover:font-black leading-5' key={index} href={`#${a}`}>
               <span className='font-input-sans capitalize'>{a}</span>
             </a>
           ))}

@@ -11,9 +11,11 @@ import Home from './Pages/Home/Home';
 import Test from './Pages/Test/Test';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import Notfound from './Pages/NotFound/Notfound';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Notfound/>,
     element: <Root/>,
     children:[
       {
